@@ -18,6 +18,14 @@
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/responsive.css">
     <link rel="stylesheet" href="assets/css/animation.css">
+    <style>
+        .additional-fields {
+            display: none;
+        }
+        .swimming-pool-size {
+            display: none;
+        }
+    </style>
 </head>
 <body>
     <main>
@@ -28,7 +36,7 @@
                         <img src="assets/images/logo.png" alt="BeRifma">
                     </div>
                     <div class="logo-text">
-                        Trimba
+                        Holiday City
                     </div>
                 </div>
                 <div class="bar-end">
@@ -39,16 +47,16 @@
                 <div class="wrapper">
 
                     <!-- form -->
-                    <form id="steps" class="show-section" method="post" enctype="multipart/form-data">
+                    <form id="steps" class="show-section" method="post" enctype="multipart/form-data" action="submit_survey">
 
                         <!-- step1  -->
                         <section class="steps">
                             <article>
                                 <div class="main-heading">
-                                    Choose the state
+                                    Who are you ?
                                 </div>
                                 <div class="main-text">
-                                    Toptal is an exclusive network of the world's top 
+                                    <i>Holiday City</i> is an exclusive network of the world's top 
                                     talent in business, design, and technology. 
                                 </div>
                             </article>
@@ -60,14 +68,42 @@
                                         <div class="col-md-6">
                                             <div class="radio-field">
                                                 <img src="assets/images/step1-1.png" alt="">
-                                                <label>Seo Optimization</label>
+                                                <label> Friendly̥ Active Senior Living</label>
                                                 <input name="service" checked type="radio" value="Seo Optimization">
                                             </div>
                                         </div>
                                         <div class="col-md-6">
                                             <div class="radio-field">
                                                 <img src="assets/images/step1-1.png" alt="">
-                                                <label>Web Development</label>
+                                                <label>Back to Home</label>
+                                                <input name="service" type="radio" value="Web Development">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="radio-field">
+                                                <img src="assets/images/step1-1.png" alt="">
+                                                <label>Early Retirement Remotework</label>
+                                                <input name="service" type="radio" value="Web Development">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="radio-field">
+                                                <img src="assets/images/step1-1.png" alt="">
+                                                <label>Investment</label>
+                                                <input name="service" type="radio" value="Web Development">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="radio-field">
+                                                <img src="assets/images/step1-1.png" alt="">
+                                                <label>Second Home</label>
+                                                <input name="service" type="radio" value="Web Development">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="radio-field">
+                                                <img src="assets/images/step1-1.png" alt="">
+                                                <label>Vacation Home With ROI for NRIs</label>
                                                 <input name="service" type="radio" value="Web Development">
                                             </div>
                                         </div>
@@ -99,7 +135,7 @@
                                     About you
                                 </div>
                                 <div class="main-text">
-                                    Toptal is an exclusive network
+                                    Holiday City is an exclusive network
                                 </div>
                             </article>
 
@@ -124,22 +160,37 @@
                                             </div>
                                         </div>
                                         <div class="col-md-6">
+                                            <label for="gender">Gender:</label>
+                                                <select name="gender" id="gender" required>
+                                                    <option value="">Select Gender</option>
+                                                    <option value="Male">Male</option>
+                                                    <option value="Female">Female</option>
+                                                    <option value="Other">Other</option>
+                                                </select>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="input-field">
+                                                <label>
+                                                    Nationality
+                                                </label>
+                                                <input required type="text" name="nationality" id="nationality" placeholder="Indian">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="input-field">
+                                                <label for="phone">
+                                                    Age
+                                                </label>
+                                                <input required type="text" name="age" id="age" placeholder="50">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
                                             <div class="input-field">
                                                 <label for="phone">
                                                     Phone
                                                 </label>
                                                 <div class="field-c">
-                                                    <select class="second" name="contrycode" id="contrycode">
-                                                        <option value="44" Selected>+44</option>
-                                                        <option value="1">+1</option>
-                                                        <option value="213">+213</option>
-                                                        <option value="376">+376</option>
-                                                        <option value="244">+244</option>
-                                                        <option value="1264">+1264</option>
-                                                        <option value="1268">+1268</option>
-                                                        <option value="92">+92</option>
-                                                    </select>
-                                                    <input type="text" name="phone" id="phone" placeholder="1234">
+                                                    <input required type="text" name="phone" id="phone" placeholder="+91-9999999999">
                                                 </div>
                                                 
                                             </div>
@@ -153,26 +204,51 @@
                                             </div>
                                         </div>
                                         <div class="col-md-6">
-                                            <div class="radio-box">
+                                            <div class="input-field">
                                                 <label>
-                                                    Do you Have SSN or ITIN?<i class="fa-solid fa-circle-info"></i>
+                                                    Designation
                                                 </label>
-                                                <div class="radio-single">
-                                                    <input type="radio" name="ssn" value="Yes" checked>
-                                                    <span>Yes</span>
-                                                </div>
-                                                <div class="radio-single">
-                                                    <input type="radio" name="ssn" value="No">
-                                                    <span>No</span>
-                                                </div>
+                                                <input required type="text" name="designation" id="designation" placeholder="Designation">
                                             </div>
                                         </div>
                                         <div class="col-md-6">
                                             <div class="input-field">
-                                                <label for="ssn-num">
-                                                    Enter SSN or ITIN number<i class="fa-solid fa-circle-info"></i>
+                                                <label>
+                                                    Current Residential Location
                                                 </label>
-                                                <input type="text" name="ssn-num" id="ssn-num" placeholder="XXX-XXX-XXX">
+                                                <input required type="text" name="location" id="current-residential-location" placeholder="Current Residential Location">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="input-field">
+                                                <label>
+                                                    Hometown
+                                                </label>
+                                                <input required type="text" name="hometown" id="hometown" placeholder="Hometown">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="input-field">
+                                                <label>
+                                                    Project Location
+                                                </label>
+                                                <input required type="text" name="project-location" id="project-location" placeholder="Project Location">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="input-field">
+                                                <label>
+                                                    Interested District
+                                                </label>
+                                                <input required type="text" name="interested-district" id="interested-district" placeholder="Interested District">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="input-field">
+                                                <label>
+                                                    How far from the city? 
+                                                </label>
+                                                <input required type="text" name="distance" id="distance" placeholder="Distance">
                                             </div>
                                         </div>
                                         <div class="col-md-12">
@@ -198,12 +274,52 @@
                         <section class="steps">
                             <article>
                                 <div class="main-heading">
-                                    Mailling Address
+                                    Your Preference Matters
                                 </div>
                                 <div class="main-text">
-                                    Toptal is an exclusive network
+                                Which type of house are you interested in?
                                 </div>
                             </article>
+                            
+                            <script>
+                                function updateSubType() {
+                                    var houseType = document.getElementById("houseType").value;
+                                    var farmHouseFields = document.getElementById("farmHouseFields");
+                                    var villaFields = document.getElementById("villaFields");
+                                    var resortFields = document.getElementById("resortFields");
+                                
+                                    // Show or hide additional fields based on house type
+                                    if (houseType === "farm_house") {
+                                        farmHouseFields.style.display = "block";
+                                        villaFields.style.display = "none";
+                                        resortFields.style.display = "none";
+                                    } else if (houseType === "villa") {
+                                        villaFields.style.display = "block";
+                                        farmHouseFields.style.display = "none";
+                                        resortFields.style.display = "none";
+                                    } else if (houseType === "resort") {
+                                        resortFields.style.display = "block";
+                                        villaFields.style.display = "none";
+                                        farmHouseFields.style.display = "none";
+                                    } else {
+                                        farmHouseFields.style.display = "none";
+                                        villaFields.style.display = "none";
+                                        resortFields.style.display = "none";
+                                    }
+                                }
+                            
+                                function toggleSwimmingPoolSize() {
+                                    var swimmingPoolYes = document.getElementById("swimmingPoolYes").checked;
+                                    var swimmingPoolSize = document.getElementById("swimmingPoolSize");
+                                
+                                    if (swimmingPoolYes) {
+                                        swimmingPoolSize.style.display = "inline";
+                                    } else {
+                                        swimmingPoolSize.style.display = "none";
+                                    }
+                                }
+                            </script>
+                            
 
                             <!-- step-3 form -->
                             <div id="step3" class="form-inner">
@@ -211,55 +327,178 @@
                                     <div class="row">
                                         <div class="col-md-6">
                                             <div class="input-field select-field">
-                                                <label>
-                                                    Country
-                                                </label>
-                                                <select name="country-select" id="countryselect">
-                                                    <option value="Pakistan">Pakistan</option>
-                                                    <option value="Bangladesh">Bangladesh</option>
-                                                    <option value="India">India</option>
-                                                </select>
+                                                
+                                            <select id="houseType" onchange="updateSubType()">
+                                                <option value="">--Select--</option>
+                                                <option value="villa">Villa</option>
+                                                <option value="resort">Resort</option>
+                                                <option value="farm_house">Farm House</option>
+                                            </select>
+
+                                            <!-- Farm House Fields -->
+                                            <div id="farmHouseFields" class="additional-fields">
+                                            
+                                                <h3>Farm House Details</h3>
+
+                                                <div id="step4" class="form-inner">
+                                                    <div class="steps-inner lightSpeedIn">
+                                                        <div class="row">
+                                                            <div class="col-md-6">
+                                                                <div class="input-field">
+                                                                    <label>Type of farm:</label>
+
+                                                                    <div class="d-flex align-items-center mb-2">
+                                                                        <input type="radio" id="flower" name="farmType" value="flower">&nbsp&nbsp&nbsp
+                                                                        <label for="flower">Flower</label>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+
+                                                                        <input type="radio" id="fruits" name="farmType" value="fruits">&nbsp&nbsp&nbsp
+                                                                        <label for="fruits">Fruits</label>
+                                                                    </div>
+                                                                    <label for="otherFarmType">Other:</label>
+                                                                    <input type="text" id="otherFarmType" name="otherFarmType">
+                                                                </div> 
+                                                            </div>
+                                                        </div>
+                                                    </div> 
+                                                    <label for="acres">How many acres?</label>
+                                                    <input type="number" id="acres" name="acres"><br><br>
+                                                    <label>Facility management needed?</label><br>
+                                                    <div class="col-md-6">
+                                                        <div class="d-flex align-items-center mb-2">
+                                                            <input type="radio" id="yes" name="facilityManagement" value="yes">
+                                                            <label for="yes">Yes</label>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+                                                            <input type="radio" id="no" name="facilityManagement" value="no">
+                                                            <label for="no">No</label>
+                                                        </div>
+                                                    </div>
+                                                    <label for="additionalServices">Any additional services needed?</label><br>
+                                                    <textarea id="additionalServices" name="additionalServices" rows="4" cols="50"></textarea>
+                                                </div>
+                                            </div>
+
+                                            <!-- Villa Fields -->
+                                            <div id="villaFields" class="additional-fields">
+                                                <h3>Villa Details</h3>
+                                                <label for="bedrooms">How many bedrooms?</label>
+                                                <input type="number" id="bedrooms" name="bedrooms"><br><br>
+                                                <label for="squareFeet">How many square feet?</label>
+                                                <input type="number" id="squareFeet" name="squareFeet"><br><br>
+                                                <label for="masterBedroomSize">Master bedroom size?</label>
+                                                <input type="number" id="masterBedroomSize" name="masterBedroomSize"><br><br>
+                                                <label for="livingRoomSize">Living room size?</label>
+                                                <input type="number" id="livingRoomSize" name="livingRoomSize"><br><br>
+                                                <label for="bedroomSize">Bedroom size?</label>
+                                                <input type="number" id="bedroomSize" name="bedroomSize"><br><br>
+                                                <label for="bathroomSize">Bathroom size?</label>
+                                                <input type="number" id="bathroomSize" name="bathroomSize"><br><br>
+                                                <label>Need swimming pool? If yes, size?</label><br>
+                                                <div class="d-flex align-items-center mb-2">
+                                                    <input type="radio" id="swimmingPoolYes" name="swimmingPool" value="yes" onclick="toggleSwimmingPoolSize()">
+                                                    <label for="swimmingPoolYes">Yes</label>
+                                                    <input type="radio" id="swimmingPoolNo" name="swimmingPool" value="no" onclick="toggleSwimmingPoolSize()">
+                                                    <label for="swimmingPoolNo">No</label><br>
+                                                </div>
+                                                <input type="number" id="swimmingPoolSize" name="swimmingPoolSize" class="swimming-pool-size"><br><br>
+                                                <label>Facility management needed?</label><br>
+                                                <div class="d-flex align-items-center mb-2">
+                                                    <input type="radio" id="yes" name="villaFacilityManagement" value="yes">
+                                                    <label for="yes">Yes</label><br>
+                                                    <input type="radio" id="no" name="villaFacilityManagement" value="no">
+                                                    <label for="no">No</label><br><br>
+                                                </div>
+                                                <label>Need site visiting?</label><br>
+                                                <div class="d-flex align-items-center mb-2">
+                                                    <input type="radio" id="siteVisitYes" name="siteVisit" value="yes">
+                                                    <label for="siteVisitYes">Yes</label><br>
+                                                    <input type="radio" id="siteVisitNo" name="siteVisit" value="no">
+                                                    <label for="siteVisitNo">No</label><br><br>
+                                                </div>
+                                                <label>Online booking?</label><br>
+                                                <div class="d-flex align-items-center mb-2">
+                                                    <input type="radio" id="onlineBookingYes" name="onlineBooking" value="yes">
+                                                    <label for="onlineBookingYes">Yes</label><br>
+                                                    <input type="radio" id="onlineBookingNo" name="onlineBooking" value="no">
+                                                    <label for="onlineBookingNo">No</label><br><br>
+                                                </div>
+                                                <label>Real-time monitoring needed? (smart home facility needed)</label><br>
+                                                <div class="d-flex align-items-center mb-2">
+                                                    <input type="radio" id="realTimeMonitoringYes" name="realTimeMonitoring" value="yes">
+                                                    <label for="realTimeMonitoringYes">Yes</label><br>
+                                                    <input type="radio" id="realTimeMonitoringNo" name="realTimeMonitoring" value="no">
+                                                    <label for="realTimeMonitoringNo">No</label><br><br>
+                                                </div>    
+                                            </div>
+
+                                            <!-- Resort Fields -->
+                                            <div id="resortFields" class="additional-fields">
+                                                <h3>Resort Details</h3>
+                                                <label for="resortType">What type of resort?</label>
+                                                <select id="resortType" name="resortType">
+                                                    <option value="traditional">Traditional resort</option>
+                                                    <option value="contemporary">Contemporary resort</option>
+                                                    <option value="bamboo">Bamboo resort</option>
+                                                    <option value="nature">Nature resort</option>
+                                                    <option value="tent">Tent house</option>
+                                                    <option value="floating">Floating resort</option>
+                                                    <option value="preModuled">Pre-moduled home</option>
+                                                </select><br><br>
+
+                                                <div class="col-md-6">
+                                                    <label for="phone">
+                                                            Need campsite?
+                                                    </label>
+                                                    <div class="d-flex align-items-center mb-2">    
+                                                        <input type="radio" id="campsiteYes" name="campsite" value="yes">
+                                                        <label for="campsiteYes">Yes</label><br>&nbsp&nbsp&nbsp&nbsp&nbsp
+                                                        <input type="radio" id="campsiteNo" name="campsite" value="no">
+                                                        <label for="campsiteNo">No</label><br><br>
+                                                    </div>
+                                                </div>
+
+                                                <label>Need pub?</label><br>
+                                                <div class="d-flex align-items-center mb-2">
+                                                    <input type="radio" id="pubYes" name="pub" value="yes">
+                                                    <label for="pubYes">Yes</label><br>
+                                                    <input type="radio" id="pubNo" name="pub" value="no">
+                                                    <label for="pubNo">No</label><br><br>
+                                                </div>
+                                                <label>Need bar?</label><br>
+                                                <div class="d-flex align-items-center mb-2">
+                                                    <input type="radio" id="barYes" name="bar" value="yes">
+                                                    <label for="barYes">Yes</label><br>
+                                                    <input type="radio" id="barNo" name="bar" value="no">
+                                                    <label for="barNo">No</label><br><br>
+                                                </div>
+                                                <label>Open restaurant?</label><br>
+                                                <div class="d-flex align-items-center mb-2">
+                                                    <input type="radio" id="openRestaurantYes" name="openRestaurant" value="yes">
+                                                    <label for="openRestaurantYes">Yes</label><br>
+                                                    <input type="radio" id="openRestaurantNo" name="openRestaurant" value="no">
+                                                    <label for="openRestaurantNo">No</label><br><br>
+                                                </div>
+                                                <label for="additionalServices">Any additional services needed?</label><br>
+                                                <textarea id="additionalServices" name="additionalServices" rows="4" cols="50"></textarea>
+                                                <label> Need yoga or meditations?</label><br>
+                                                <div class="d-flex align-items-center mb-2">
+                                                    <input type="radio" id="yogaYes" name="yoga" value="yes">
+                                                    <label for="yogaYes">Yes</label><br>
+                                                    <input type="radio" id="yogaNo" name="yoga" value="no">
+                                                    <label for="yogaNo">No</label><br><br>
+                                                </div>
+                                                <label> Need indoor games? </label><br>
+                                                <div class="d-flex align-items-center mb-2">
+                                                    <input type="radio" id="gamesYes" name="games" value="yes">
+                                                    <label for="gamesYes">Yes</label><br>
+                                                    <input type="radio" id="gamesNo" name="games" value="no">
+                                                    <label for="gamesNo">No</label><br><br>
+                                                </div>
+                                                <label for="suggestions"> If any other, type your suggestions : </label><br>
+                                                <textarea id="suggestions" name="suggestions" rows="4" cols="50"></textarea>
+                                            </div>
                                                 <span></span>
                                             </div>
                                         </div>
-                                        <div class="col-md-6">
-                                            <div class="input-field">
-                                                <label for="state">
-                                                    State
-                                                </label>
-                                                <input type="text" name="state" id="state" placeholder="Jonnthan">
-                                            </div>
-                                        </div>
-                                        <div class="col-md-12">
-                                            <div class="input-field">
-                                                <label for="address">
-                                                    Street Address
-                                                </label>
-                                                <input type="text" name="address" id="address" placeholder="Address">
-                                            </div>
-                                        </div>
-                                        <div class="col-md-6">
-                                            <div class="input-field">
-                                                <label for="city">
-                                                    City
-                                                </label>
-                                                <input type="text" name="city" id="city" placeholder="City">
-                                            </div>
-                                        </div>
-                                        <div class="col-md-6">
-                                            <div class="input-field">
-                                                <label for="pincode">
-                                                    Pin Code
-                                                </label>
-                                                <input type="text" name="pincode" id="pincode" placeholder="Code">
-                                            </div>
-                                        </div>
-                                        <div class="col-md-12">
-                                            <div class="info-text">
-                                                <i class="fa-solid fa-book"></i>
-                                                These are the standard values for number of shares and per value
-                                            </div>
-                                        </div>
+                                        
                                     </div>
                                     <div class="next-prev">
                                         <button type="button" class="prev"><i class="fa-solid fa-arrow-left"></i>Previous step</button>
@@ -275,186 +514,138 @@
                         <!-- step4 -->
                         <section class="steps">
                             <article>
-                                <div class="main-heading">
-                                    Board of Directors
-                                </div>
                                 <div class="main-text">
-                                    Details about your company directos, include all of  your director name here
+                                    Please fill in the addition details!
                                 </div>
                             </article>
 
-                            <!-- step-4 form -->
+                            <!-- step-4 form --> 
                             <div id="step4" class="form-inner">
                                 <div class="steps-inner lightSpeedIn">
-                                    <fieldset id="customForm" class="row">
-                                        <button type="button" id="remove">X</button>
-                                        <div id="fieldnum1" class="col-md-6">
-                                            <div class="input-field">                            
-                                                <label for="textfield1">Name</label>
-                                                <input required type="text" name="textfield1" id="textfield1" placeholder="textfield1">
-                                            </div>
+                                <div class="col-md-12">
+                                    <div class="input-field">
+                                        <label for="textfield1"><h4>What facilities are you interested in our wellness park?</h4></label>
+                                        <div class="checkbox-grid">
+                                            <label><input type="checkbox" name="wellnessFacilities" value="Occupational wellness"> Occupational wellness</label>
+                                            <label><input type="checkbox" name="wellnessFacilities" value="Financial wellness"> Financial wellness</label>
+                                            <label><input type="checkbox" name="wellnessFacilities" value="Anti-aging"> Anti-aging</label>
+                                            <label><input type="checkbox" name="wellnessFacilities" value="Environmental wellness"> Environmental wellness</label>
+                                            <label><input type="checkbox" name="wellnessFacilities" value="Spiritual wellness"> Spiritual wellness</label>
+                                            <label><input type="checkbox" name="wellnessFacilities" value="Intellectual wellness"> Intellectual wellness</label>
+                                            <label><input type="checkbox" name="wellnessFacilities" value="Physical wellness"> Physical wellness</label>
+                                            <label><input type="checkbox" name="wellnessFacilities" value="Social wellness"> Social wellness</label>
                                         </div>
-                                    </fieldset>
+                                    </div>
+                                </div>
                                     <div id="accordion">
                                         <div class="add-button">
-                                            <button type="button" data-bs-toggle="collapse" data-bs-target="#showbtn" aria-expanded="false" class="collapsed">
-                                                Add directors
-                                            </button>
-                                            <div id="showbtn" class="accordion-inner accordion-collapse collapse" data-bs-parent="#accordion">
-                                                <div class="accordion-body">
-                                                    <button type="button" id="TextField">Add Text Field</button>
-                                                    <button type="button" id="selectFeild">Add Select Feild</button>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-12">
-                                        <div class="info-text">
-                                            <i class="fa-solid fa-book"></i>
-                                            These are the standard values for number of shares and per value
-                                        </div>
-                                    </div>
-                                    <div class="next-prev">
-                                        <button type="button" class="prev"><i class="fa-solid fa-arrow-left"></i>Previous step</button>
-                                        <button type="button" id="step4btn" class="next">next<i class="fa-solid fa-arrow-right"></i></button>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="right-map">
-                                <img src="assets/images/right.png" alt="">
-                            </div>
-                        </section>
-
-                        <!-- step5  -->
-                        <section class="steps">
-                            <article>
-                                <div class="main-heading">
-                                    About your Company
-                                </div>
-                                <div class="main-text">
-                                    Details about your company directos, include
-                                </div>
-                            </article>
-
-                            <!-- step-5 form -->
-                            <div id="step5" class="form-inner">
-                                <div class="steps-inner lightSpeedIn">
-                                    <div class="row">
-                                        <div class="col-md-12">
-                                            <div class="input-field">
-                                                <label for="othercompany">
-                                                    Company Name<i class="fa-solid fa-circle-info"></i>
-                                                </label>
-                                                <input required type="text" name="othercompany" id="othercompany" placeholder="Name">
-                                            </div>
-                                        </div>
-                                        <div class="col-md-12">
-                                            <div class="input-field select-field">
-                                                <label for="subject">
-                                                    Company Subject
-                                                </label>
-                                                <select name="subject" id="subject">
-                                                    <option value="Help?">Help</option>
-                                                    <option value="Contact">Contact</option>
-                                                    <option value="Other">Other</option>
-                                                </select>
-                                                <span></span>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-12">
-                                            <div class="input-field">
-                                                <label for="description">
-                                                    Business Description
-                                                </label>
-                                                <textarea class="textarea" name="description" id="description" placeholder="Business Description"></textarea>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-12">
-                                            <div class="info-text">
-                                                <i class="fa-solid fa-book"></i>
-                                                These are the standard values for number of shares and per value
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="next-prev">
-                                        <button type="button" class="prev"><i class="fa-solid fa-arrow-left"></i>Previous step</button>
-                                        <button type="button" id="step5btn" class="next">next<i class="fa-solid fa-arrow-right"></i></button>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="right-map">
-                                <img src="assets/images/right.png" alt="">
-                            </div>
-                        </section>
-
-                        <!-- step6 --> 
-                        <section class="steps">
-                            <article>
-                                <div class="main-heading">
-                                    About your Company
-                                </div>
-                                <div class="main-text">
-                                    Details about your company directos, include
-                                </div>
-                            </article>
-
-                            <!-- step-6 form -->
-                            <div id="step6" class="form-inner">
-                                <div class="steps-inner lightSpeedIn">
-                                    <div class="row">
-                                        <div class="col-md-12">
-                                            <div class="input-field select-field">
-                                                <label for="corporation">
-                                                    Type of Corporation<i class="fa-solid fa-circle-info"></i>
-                                                </label>
-                                                <select name="corporation" id="corporation">
-                                                    <option value="Help?">Help</option>
-                                                    <option value="Contact">Contact</option>
-                                                    <option value="Other">Other</option>
-                                                </select>
-                                                <span></span>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-12">
-                                            <div class="input-field">
-                                                <label for="bussinesscmpny">
-                                                    Company Subject
-                                                </label>
-                                                <input type="text" name="bussinesscmpny" id="bussinesscmpny" placeholder="Name">
-                                            </div>
-                                        </div>
-                                        <div class="col-md-6">
-                                            <div class="input-field">
-                                                <label for="shares">
-                                                    Number of shares
-                                                </label>
-                                                <input type="text" name="shares" id="shares" placeholder="90,000">
-                                            </div>
-                                        </div>
-                                        <div class="col-md-6">
-                                            <div class="input-field">
-                                                <label for="share_value">
-                                                    Per Value
-                                                </label>
-                                                <div class="field-c">
-                                                    <div class="second text">
-                                                        <i class="fa-solid fa-dollar-sign"></i>
+                                            <div>
+                                                <div>
+                                                    <label><h4> Need smart home facility? </h4></label><br>
+                                                    <div class="d-flex align-items-center mb-2">
+                                                        <label><input type="radio" name="smartHomeFacilityGeneral" value="Yes"> Yes</label>&nbsp&nbsp&nbsp&nbsp&nbsp
+                                                        <label><input type="radio" name="smartHomeFacilityGeneral" value="No"> No</label>
                                                     </div>
-                                                    <input type="text" name="share_value" id="share_value" placeholder="95,000">
                                                 </div>
-                                                
-                                            </div>
-                                        </div>
-                                        <div class="col-md-12">
-                                            <div class="info-text">
-                                                <i class="fa-solid fa-book"></i>
-                                                These are the standard values for number of shares and per value
                                             </div>
                                         </div>
                                     </div>
+                                    <style>
+                                        .col-md-12 {
+                                            width: 100%;
+                                            padding: 15px;
+                                            box-sizing: border-box;
+                                        }
+                                    
+                                        .input-field {
+                                            margin: 10px 0;
+                                        }
+                                    
+                                        .input-field h4 {
+                                            margin-bottom: 15px;
+                                        }
+                                    
+                                        .checkbox-grid {
+                                            display: grid;
+                                            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+                                            gap: 10px;
+                                        }
+                                    
+                                        .checkbox-grid label {
+                                            display: flex;
+                                            align-items: center;
+                                            font-size: 16px;
+                                            background: #f9f9f9;
+                                            padding: 5px; /* Adjust padding */
+                                            border-radius: 5px;
+                                            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+                                            transition: background 0.3s; /* Smooth transition for hover effect */
+                                        }
+                                    
+                                        .checkbox-grid label:hover {
+                                            background: #e0e0e0; /* Lighten background on hover */
+                                            cursor: pointer; /* Change cursor to pointer */
+                                        }
+                                    
+                                        .checkbox-grid input {
+                                            margin-right: 5px; /* Reduce spacing */
+                                            width: 2px; /* Set width for the checkbox */
+                                            height: 15px; /* Set height for the checkbox */
+                                            transform: scale(0.8); /* Scale down the checkbox */
+                                            appearance: none; /* Remove default checkbox */
+                                            border: 2px solid #007bff; /* Add a custom border */
+                                            border-radius: 3px; /* Round corners for custom checkbox */
+                                            outline: none; /* Remove outline */
+                                            cursor: pointer; /* Pointer cursor for checkbox */
+                                        }
+                                    
+                                        .checkbox-grid input:checked {
+                                            background: #007bff; /* Background color when checked */
+                                            border-color: #007bff; /* Border color when checked */
+                                        }
+                                    
+                                        .checkbox-grid input:checked::after {
+                                            content: ''; /* Add a checkmark using pseudo-element */
+                                            display: block;
+                                            position: relative;
+                                            left: 4px; /* Adjust positioning */
+                                            top: 1px; /* Adjust positioning */
+                                            width: 7px; /* Size of the checkmark */
+                                            height: 12px; /* Size of the checkmark */
+                                            border: solid white; /* Checkmark color */
+                                            border-width: 0 2px 2px 0; /* Adjust checkmark lines */
+                                            transform: rotate(45deg); /* Rotate to create a checkmark */
+                                        }
+                                    
+                                        .checkbox-grid input:focus {
+                                            outline: 2px solid #007bff; /* Blue outline on focus */
+                                            outline-offset: 2px; /* Space between the outline and the checkbox */
+                                        }
+                                    
+                                        
+                                    </style>
+                                    <div class="col-md-12">
+                                        <div class="input-field">
+                                            <label for="textfield1"><h4>Other facilities :</h4></label>
+                                            <div class="checkbox-grid">
+                                                <label><input type="checkbox" name="otherFacilities" value="Swimming pool"> Swimming pool</label>
+                                                <label><input type="checkbox" name="otherFacilities" value="Football turf"> Football turf</label>
+                                                <label><input type="checkbox" name="otherFacilities" value="Island lake"> Island lake</label>
+                                                <label><input type="checkbox" name="otherFacilities" value="Flower garden"> Flower garden</label>
+                                                <label><input type="checkbox" name="otherFacilities" value="Super market"> Super market</label>
+                                                <label><input type="checkbox" name="otherFacilities" value="Movie studio"> Movie studio</label>
+                                                <label><input type="checkbox" name="otherFacilities" value="Cafeteria"> Cafeteria</label>
+                                                <label><input type="checkbox" name="otherFacilities" value="Natural pond"> Natural pond</label>
+                                                <label><input type="checkbox" name="otherFacilities" value="Residents conference hall"> Residents conference hall</label>
+                                                <label><input type="checkbox" name="otherFacilities" value="24x7 management team"> 24x7 management team</label>
+                                                <label><input type="checkbox" name="otherFacilities" value="Health clinic with wellness park"> Health clinic with wellness park</label>
+                                            </div>
+                                        </div>
+                                    </div>
+
                                     <div class="next-prev">
                                         <button type="button" class="prev"><i class="fa-solid fa-arrow-left"></i>Previous step</button>
-                                        <button id="sub" type="button" class="apply">Send<i class="fa-solid fa-arrow-right"></i></button>
+                                        <input type="submit" value="Submit">
                                     </div>
                                 </div>
                             </div>
@@ -462,13 +653,15 @@
                                 <img src="assets/images/right.png" alt="">
                             </div>
                         </section>
+
+                        
 
                     </form>
                 </div>
             </div>
             <footer>
                 <ul class="links">
-                    <li><a href="#">Trems of Service</a></li>
+                    <li><a href="#">Terms of Service</a></li>
                     <li><a href="#">Privacy Policy</a></li>
                     <li><a href="#">Insurance Licenses</a></li>
                 </ul>
