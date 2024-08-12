@@ -69,42 +69,42 @@
                                             <div class="radio-field">
                                                 <img src="assets/images/step1-1.png" alt="">
                                                 <label> Friendly̥ Active Senior Living</label>
-                                                <input name="service" checked type="radio" value="Seo Optimization">
+                                                <input name="who_are_you" checked type="radio" value="friendly_active_senior">
                                             </div>
                                         </div>
                                         <div class="col-md-6">
                                             <div class="radio-field">
                                                 <img src="assets/images/step1-1.png" alt="">
                                                 <label>Back to Home</label>
-                                                <input name="service" type="radio" value="Web Development">
+                                                <input name="who_are_you" type="radio" value="back_to_home">
                                             </div>
                                         </div>
                                         <div class="col-md-6">
                                             <div class="radio-field">
                                                 <img src="assets/images/step1-1.png" alt="">
                                                 <label>Early Retirement Remotework</label>
-                                                <input name="service" type="radio" value="Web Development">
+                                                <input name="who_are_you" type="radio" value="early_retirement_remotework">
                                             </div>
                                         </div>
                                         <div class="col-md-6">
                                             <div class="radio-field">
                                                 <img src="assets/images/step1-1.png" alt="">
                                                 <label>Investment</label>
-                                                <input name="service" type="radio" value="Web Development">
+                                                <input name="who_are_you" type="radio" value="investment">
                                             </div>
                                         </div>
                                         <div class="col-md-6">
                                             <div class="radio-field">
                                                 <img src="assets/images/step1-1.png" alt="">
                                                 <label>Second Home</label>
-                                                <input name="service" type="radio" value="Web Development">
+                                                <input name="who_are_you" type="radio" value="second_home">
                                             </div>
                                         </div>
                                         <div class="col-md-6">
                                             <div class="radio-field">
                                                 <img src="assets/images/step1-1.png" alt="">
                                                 <label>Vacation Home With ROI for NRIs</label>
-                                                <input name="service" type="radio" value="Web Development">
+                                                <input name="who_are_you" type="radio" value="vacation_home_with_roi_for_nris">
                                             </div>
                                         </div>
                                     </div>
@@ -148,7 +148,7 @@
                                                 <label>
                                                     First Name
                                                 </label>
-                                                <input required type="text" name="first-name" id="firstName" placeholder="Jonnthan">
+                                                <input required type="text" name="first_name" id="firstName" placeholder="Jonnthan">
                                             </div>
                                         </div>
                                         <div class="col-md-6">
@@ -156,7 +156,7 @@
                                                 <label>
                                                     Last Name
                                                 </label>
-                                                <input required type="text" name="last-name" id="lastName" placeholder="Jonnthan">
+                                                <input required type="text" name="last_name" id="lastName" placeholder="Jonnthan">
                                             </div>
                                         </div>
                                         <div class="col-md-6">
@@ -181,7 +181,7 @@
                                                 <label for="phone">
                                                     Age
                                                 </label>
-                                                <input required type="text" name="age" id="age" placeholder="50">
+                                                <input required type="number" name="age" id="age" placeholder="50">
                                             </div>
                                         </div>
                                         <div class="col-md-6">
@@ -200,7 +200,7 @@
                                                 <label>
                                                     Email
                                                 </label>
-                                                <input required type="text" name="mail" id="mail-email" placeholder="Email">
+                                                <input required type="text" name="email" id="email" placeholder="Email">
                                             </div>
                                         </div>
                                         <div class="col-md-6">
@@ -216,7 +216,7 @@
                                                 <label>
                                                     Current Residential Location
                                                 </label>
-                                                <input required type="text" name="location" id="current-residential-location" placeholder="Current Residential Location">
+                                                <input required type="text" name="current_residential_location" id="current_residential_location" placeholder="Current Residential Location">
                                             </div>
                                         </div>
                                         <div class="col-md-6">
@@ -232,7 +232,7 @@
                                                 <label>
                                                     Project Location
                                                 </label>
-                                                <input required type="text" name="project-location" id="project-location" placeholder="Project Location">
+                                                <input required type="text" name="project_location" id="project_location" placeholder="Project Location">
                                             </div>
                                         </div>
                                         <div class="col-md-6">
@@ -240,7 +240,7 @@
                                                 <label>
                                                     Interested District
                                                 </label>
-                                                <input required type="text" name="interested-district" id="interested-district" placeholder="Interested District">
+                                                <input required type="text" name="interested_district" id="interested_district" placeholder="Interested District">
                                             </div>
                                         </div>
                                         <div class="col-md-6">
@@ -248,7 +248,7 @@
                                                 <label>
                                                     How far from the city? 
                                                 </label>
-                                                <input required type="text" name="distance" id="distance" placeholder="Distance">
+                                                <input required type="number" name="distance" id="distance" placeholder="Distance">
                                             </div>
                                         </div>
                                         <div class="col-md-12">
@@ -328,7 +328,7 @@
                                         <div class="col-md-6">
                                             <div class="input-field select-field">
                                                 
-                                            <select id="houseType" onchange="updateSubType()">
+                                            <select name="houseType" id="houseType" onchange="updateSubType()" required>
                                                 <option value="">--Select--</option>
                                                 <option value="villa">Villa</option>
                                                 <option value="resort">Resort</option>
